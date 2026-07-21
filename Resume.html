@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resume of Sunil Hegde PMP, CSM, SAFe Agilist" />
+  <title>Sunil Hegde | Resume</title>
+  <style>
+    :root {
+      --ink: #13202b;
+      --muted: #5d6b78;
+      --accent: #0f6f73;
+      --accent-soft: #e8f3f3;
+      --line: #dce4e8;
+      --paper: #ffffff;
+      --canvas: #edf1f3;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.35;
+    }
+
+    body { padding: 28px; }
+
+    .resume {
+      width: 100%;
+      max-width: 1080px;
+      min-height: 760px;
+      margin: 0 auto;
+      background: var(--paper);
+      box-shadow: 0 18px 50px rgba(20, 35, 45, 0.12);
+      display: grid;
+      grid-template-columns: 255px 1fr;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      background: #163842;
+      color: #fff;
+      padding: 34px 28px;
+    }
+
+    .main {
+      padding: 34px 38px 28px;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      font-size: 34px;
+      line-height: 1.05;
+      letter-spacing: -0.8px;
+      margin-bottom: 8px;
+    }
+
+    .credentials {
+      color: var(--accent);
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: .2px;
+      margin-bottom: 10px;
+    }
+
+    .headline {
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
+      max-width: 760px;
+      margin-bottom: 5px;
+    }
+
+    .location {
+      color: #87929c;
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+
+    .top-rule {
+      width: 52px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .section { margin-bottom: 17px; }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 9px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .section-title::after {
+      content: "";
+      height: 1px;
+      background: var(--line);
+      flex: 1;
+    }
+
+    .summary {
+      font-size: 13px;
+      color: #33414d;
+      margin-bottom: 0;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 26px;
+      row-gap: 12px;
+    }
+
+    .role {
+      border-left: 3px solid var(--accent-soft);
+      padding-left: 12px;
+      break-inside: avoid;
+    }
+
+    .company {
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 1px;
+    }
+
+    .title {
+      font-size: 13px;
+      font-weight: 650;
+      color: #283845;
+      margin-bottom: 2px;
+    }
+
+    .dates, .role-location {
+      font-size: 11.5px;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .education-card {
+      padding: 10px 12px;
+      background: #f6f9fa;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .education-card strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    .education-card span {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .side-section { margin-bottom: 28px; }
+
+    .side-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      color: #9fd2d4;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 12.5px;
+      word-break: break-word;
+    }
+
+    .contact p {
+      margin-bottom: 9px;
+      font-size: 12.5px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 8px;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      font-size: 11px;
+    }
+
+    .cert-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .cert-list li {
+      position: relative;
+      padding-left: 13px;
+      margin-bottom: 8px;
+      font-size: 11.5px;
+      color: #eef7f7;
+    }
+
+    .cert-list li::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #7bc4c7;
+      position: absolute;
+      left: 0;
+      top: 6px;
+    }
+
+    .print-note {
+      font-size: 10px;
+      color: rgba(255,255,255,.52);
+      margin-top: 32px;
+    }
+
+    @media (max-width: 760px) {
+      body { padding: 0; }
+      .resume {
+        grid-template-columns: 1fr;
+        box-shadow: none;
+      }
+      .sidebar, .main { padding: 28px 24px; }
+      .timeline { grid-template-columns: 1fr; }
+    }
+
+    @page {
+      size: Letter;
+      margin: 0;
+    }
+
+    @media print {
+      html, body {
+        width: 8.5in;
+        height: 11in;
+        background: #fff;
+      }
+
+      body { padding: 0; }
+
+      .resume {
+        width: 8.5in;
+        height: 11in;
+        min-height: 11in;
+        max-width: none;
+        box-shadow: none;
+        grid-template-columns: 2.05in 1fr;
+      }
+
+      .sidebar {
+        padding: .34in .25in;
+      }
+
+      .main {
+        padding: .34in .36in .25in;
+      }
+
+      h1 { font-size: 29px; }
+      .headline { font-size: 12px; }
+      .summary { font-size: 11.2px; }
+      .section { margin-bottom: 13px; }
+      .timeline { row-gap: 9px; column-gap: 18px; }
+      .company { font-size: 12px; }
+      .title { font-size: 11.2px; }
+      .dates, .role-location { font-size: 9.8px; }
+      .side-section { margin-bottom: 22px; }
+      .tag { font-size: 9.5px; }
+      .cert-list li, .contact a, .contact p { font-size: 10px; }
+      .print-note { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume">
+    <aside class="sidebar">
+      <section class="side-section contact">
+        <div class="side-title">Contact</div>
+        <p><a href="mailto:hmsuneel@gmail.com">hmsuneel@gmail.com</a></p>
+        <p><a href="https://www.linkedin.com/in/hegdesunil">linkedin.com/in/hegdesunil</a></p>
+      </section>
+
+      <section class="side-section">
+        <div class="side-title">Top Skills</div>
+        <div class="tag-list">
+          <span class="tag">Delivery Operations</span>
+          <span class="tag">Agile Methodologies</span>
+          <span class="tag">Delivery Lead</span>
+        </div>
+      </section>
+
+      <section class="side-section">
+        <div class="side-title">Certifications</div>
+        <ul class="cert-list">
+          <li>Generative AI Overview for Project Managers</li>
+          <li>Scrum Master Certified (SMC)</li>
+          <li>SAFe Agilist Certification</li>
+          <li>Project Management Professional (PMP)</li>
+        </ul>
+      </section>
+
+      <p class="print-note">Designed as a one-page digital and print resume.</p>
+    </aside>
+
+    <section class="main">
+      <header>
+        <h1>Sunil Hegde</h1>
+        <div class="credentials">PMP · CSM · SAFe Agilist</div>
+        <p class="headline">Senior Data Analytics &amp; Insights Leader / Sr. Technical Product / Program Manager / Delivery Lead / Agile Transformation Leader / AI Enthusiast / Release Train Engineer / Agile and Digital Transformation Leader at Everest Insurance</p>
+        <p class="location">New York City Metropolitan Area</p>
+        <div class="top-rule"></div>
+      </header>
+
+      <section class="section">
+        <div class="section-title">Professional Summary</div>
+        <p class="summary">
+          Accomplished IT professional with a proven ability to create an environment for teams to deliver extraordinary results. Having progressive experience driving enterprise data transformation, actuarial &amp; financial analytics modernization, and large-scale reporting platforms. Proven ability to lead multidisciplinary engineering teams, modernize legacy systems, implement advanced analytics capabilities, and partner directly with executive leadership. Recognized for building high-performance cultures, designing scalable data ecosystems, and delivering business value with speed, precision, and technical excellence. Effective communicator and problem solver with ability to quickly identify, focus and execute key priorities.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Experience</div>
+        <div class="timeline">
+          <article class="role">
+            <div class="company">Everest</div>
+            <div class="title">Sr Product / Program Manager</div>
+            <p class="dates">January 2021 – Present (5 years 7 months)</p>
+          </article>
+
+          <article class="role">
+            <div class="company">Windstream</div>
+            <div class="title">AVP, Product &amp; BI Platform Owner</div>
+            <p class="dates">2014 – December 2020 (6 years)</p>
+            <p class="role-location">New York, United States</p>
+          </article>
+
+          <article class="role">
+            <div class="company">Parallon</div>
+            <div class="title">Technical Product / Program Manager</div>
+            <p class="dates">March 2012 – April 2014 (2 years 2 months)</p>
+          </article>
+
+          <article class="role">
+            <div class="company">Quest Communication</div>
+            <div class="title">Technical Project Manager</div>
+            <p class="dates">January 2010 – February 2012 (2 years 2 months)</p>
+          </article>
+
+          <article class="role">
+            <div class="company">WEA Trust</div>
+            <div class="title">Technical Project Manager</div>
+            <p class="dates">December 2005 – December 2009 (4 years 1 month)</p>
+          </article>
+
+          <article class="role">
+            <div class="company">Amateur Trapshooting Association of America</div>
+            <div class="title">Dev Lead / Technical Project Manager</div>
+            <p class="dates">March 2002 – November 2005 (3 years 9 months)</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">Education</div>
+        <div class="education-card">
+          <strong>University of Mumbai</strong>
+          <span>Bachelor of Science – BS, Computer Programming</span>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
